@@ -34,6 +34,7 @@ module.exports.doLogin = (req, res, next) => {
               throw createError(400, 'invalid password');
             } else {
               req.session.user = user;
+              //res.cookie('foo', 'bar')
               res.json(user)
             }
           })
