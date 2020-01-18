@@ -52,7 +52,7 @@ module.exports.addComment = (req, res, next) => {
 
   const comment = new Comment({
     text: req.body.text,
-    user: req.currentUser._id,
+    user: req.currentUser.id,
     tweet: tweetId
   })
   
