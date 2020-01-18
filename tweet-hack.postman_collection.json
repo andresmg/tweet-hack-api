@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "e388f309-9454-40c6-9bb0-251fef369b98",
+		"name": "tweet-hack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "tweets",
+			"item": [
+				{
+					"name": "GET tweets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://tweet-hack-api.herokuapp.com/tweets",
+							"protocol": "https",
+							"host": [
+								"tweet-hack-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tweets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET tweet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://tweet-hack-api.herokuapp.com/tweets/5e22f753cebcfa0018a1a45c",
+							"protocol": "https",
+							"host": [
+								"tweet-hack-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tweets",
+								"5e22f753cebcfa0018a1a45c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE tweet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"body\": \"TODO\"\n}"
+						},
+						"url": {
+							"raw": "https://tweet-hack-api.herokuapp.com/tweets",
+							"protocol": "https",
+							"host": [
+								"tweet-hack-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tweets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"body\": \"DASDA\"\n}"
+						},
+						"url": {
+							"raw": "https://tweet-hack-api.herokuapp.com/tweets/5e22f753cebcfa0018a1a45c/comments",
+							"protocol": "https",
+							"host": [
+								"tweet-hack-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tweets",
+								"5e22f753cebcfa0018a1a45c",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIKE tweet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"body\": \"DASDA\"\n}"
+						},
+						"url": {
+							"raw": "https://tweet-hack-api.herokuapp.com/tweets/5e22f753cebcfa0018a1a45c/comments",
+							"protocol": "https",
+							"host": [
+								"tweet-hack-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"tweets",
+								"5e22f753cebcfa0018a1a45c",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"julio\",\n\t\"name\": \"Julio\",\n\t\"email\": \"julio@example.com\",\n\t\"password\": \"1233211!\"\n}"
+						},
+						"url": {
+							"raw": "https://tweet-hack-api.herokuapp.com/users",
+							"protocol": "https",
+							"host": [
+								"tweet-hack-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://tweet-hack-api.herokuapp.com/users/fletcher.harber",
+							"protocol": "https",
+							"host": [
+								"tweet-hack-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"fletcher.harber"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"julio@example.com\",\n\t\"password\": \"1233211!\"\n}"
+				},
+				"url": {
+					"raw": "https://tweet-hack-api.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"tweet-hack-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://tweet-hack-api.herokuapp.com/logout",
+					"protocol": "https",
+					"host": [
+						"tweet-hack-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
