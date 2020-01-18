@@ -24,7 +24,7 @@ module.exports.index = (req, res, next) => {
 }
 
 module.exports.like = (req, res, next) => {
-  const params = { tweet: req.params.id, user: req.currentUser._id }
+  const params = { tweet: req.params.id, user: req.currentUser.id }
 
   Like.findOne(params)
     .then(like => {
@@ -87,7 +87,7 @@ module.exports.show = (req, res, next) => {
 
 module.exports.create = (req, res, next) => {
   const tweet = new Tweet({
-    user: req.currentUser._id,
+    user: req.currentUser.id,
     body: req.body.body,
     image: req.file ? req.file.url : undefined
   })
