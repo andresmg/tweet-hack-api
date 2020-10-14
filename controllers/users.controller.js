@@ -18,6 +18,7 @@ module.exports.create = (req, res, next) => {
 
 module.exports.doLogin = (req, res, next) => {
   const { email, password } = req.body
+  console.log(req.body)
 
   if (!email || !password) {
     throw createError(400, 'missing credentials');
@@ -35,6 +36,7 @@ module.exports.doLogin = (req, res, next) => {
             } else {
               req.session.user = user;
               //res.cookie('foo', 'bar')
+              console.log(`DESDE EL BACKEND-API user: ${user}`)
               res.json(user)
             }
           })
